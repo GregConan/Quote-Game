@@ -28,7 +28,7 @@ However, I have not fully or rigorously tested the game in multiple browsers or 
 
 ### Quote List File
 
-For the game to run, you must include a quotes `.JSON` file. I included `example-quotes.json` to show the expected formatting.
+For the game to run, you must include a quotes `.JSON` file. I included `example-quotes.json` with generic text strings to show the expected formatting.
 
 ## Extra Features
 
