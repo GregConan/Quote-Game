@@ -14,8 +14,8 @@
 /* Global constants: File path of quote list, default list of people to
    randomly select quotes from, random joke API, and OAuth comment scrips */
 const MY_USERNAME = "";
-const QUOTES_FILE = "./names.json";  // "gfa_quotes.txt";
-// const INITIAL_QUOTE_POOL = ["first1 last1", "first2 last2", ... "firstN lastN"]
+const QUOTES_FILE = "./example-quotes.json";  // "gfa_quotes.txt";
+const INITIAL_QUOTE_POOL = ["Firstname1 Lastname1", "Firstname2 Lastname2"]
 const JOKE_API_URL = "https://official-joke-api.appspot.com/random_joke";
 const OAUTH_BASE = "http://web.cs.georgefox.edu/comment/" + MY_USERNAME;
 
