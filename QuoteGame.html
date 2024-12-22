@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- gconan15@georgefox.edu
+     Greg Conan
+     Created 2019-03-12
+     Last Updated 2019-04-10
+     Greg Quote List Guessing Game -->
+<html lang="en">
+<head>
+	<title>Greg Quote List Guessing Game</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type = "text/javascript" src = "random.js"></script>
+	<script type = "text/javascript" src = "QuoteGame.js"></script>
+	<!-- script type="text/javascript" src="gfa_quotes.json"></script -->
+	<!-- script src=<%=Page.ResolveUrl("~/gfa_quotes.json")%>></script -->
+	<!-- script src="<% = Url.Content('~/Site/Scripts/myjsfile.js') %>?root=<% = Page.ResolveUrl('~/Site/images') %>"></script -->
+	<script>
+		// const fs = require("fs");
+		// var mydata = JSON.parse(gfa_quotes);
+		// console.log(mydata);
+	</script>
+</head>
+<body onload = "startup();">
+
+	<!-- Topnav bar for logging in/out and signing up -->
+	<div class = "topnav">
+		<a id = "logout" class = "afterLogin" onclick = "logout();">
+			<h3>Log Out</h3></a>
+		<a id = "navBarUsername" class = "afterLogin"><h3></h3></a>
+		<a id = "login" class = "initial" onclick = "toggleShown(this.id);">
+			<h3>Login</h3></a>
+		<a id = "signup" class = "initial" onclick = "toggleShown(this.id);">
+			<h3>Sign Up</h3></a>
+	</div>
+	<div id = "signupDiv" class = "topnav forms">
+		<br />
+		<form id = "signupForm" onsubmit =
+			"signup(this.user.value, this.pass.value); return false;">
+			<label>Username: <input type = "text" id = "user">
+				</input></label><br />
+			<label>Password: <input type = "password" id = "pass">
+				</input><label>
+			<input type = "submit" value = "Sign Up"></input>
+		</form>
+	</div>
+	<div id = "loginDiv" class = "topnav forms">
+		<br />
+		<form id = "loginForm" onsubmit =
+			"login(this.user.value, this.pass.value); return false;">
+			<label>Username: <input type  = "text" id = "user">
+				</input></label><br />
+			<label>Password: <input type = "password" id = "pass">
+				</input><label>
+			<input type = "submit" value = "Login"></input>
+		</form>
+	</div>
+	
+	<!-- Main body of game -->
+	<h2 id = "title">Greg Quote List Guessing Game</h2>
+		<br />
+	<button id = "reset" onclick = "resetGame();"
+		style = "display: block;">New Game</button>
+		<br />
+	<div class = "highlight">
+		<h2><span id = "quote"></span> is a(n)</h2>
+			<br />
+		<div id = "activePeople"></div>
+			<br />
+		<div id = "scoreSection">
+			<h2 id = "correctness"></h2>
+			<h2 id = "score"></h2>
+		</div>
+	</div>
+		<br />
+		
+	<!-- Checkboxes of people to pick quotes from -->
+	<h2>Randomly select from:</h2>
+		<br />
+	<div class = "highlight">
+		<label id = "allLabel"><input type = "checkbox" id = "selectAll"
+			onclick = "selectAll();"><br />Everyone</input></label>
+			<br/><br/>
+		<label id = "noneLabel"><input type = "checkbox" id = "deselectAll"
+			onclick = "deselectAll();"><br />No One</input></label>
+			<br/><br/>
+		<div id = "checkboxes"></div>
+	</div>
+		<br />
+		
+	<!-- Random joke button -->
+	<button id = "jokeButton" onclick = "getJoke();"
+		style = "display: block;">Want to hear a dumb joke?</button>
+	<h3 id = "setup"></h3>
+	<button id = "punchlineButton" onclick = "showPunchline();"
+		style = "display: none;">Punchline</button>
+	<h3 id = "punchline"></h3>
+		<br />
+	
+	<!-- Comments -->
+	<h2>Comments</h2>
+	<div id = "comments" class = "highlight">
+		<br />
+		<form id = "newComment" class = "comment"
+			onsubmit = "newComment(); return false;">
+			<textarea id = "newCommentText" rows = "4"></textarea>
+				<br />
+			<input type = "submit" value = "Post New Comment"></input>
+		</form>
+		<br />
+		<div id = "oldComments" class = "comment">
+	</div>
+</body>
+</html>

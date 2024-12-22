@@ -1,0 +1,197 @@
+/* gconan15@georgefox.edu
+   Greg Conan
+   Quote List Game
+   Created 2019-04-09
+   Last Updated 2019-04-10 */
+
+/* ==============================================================
+   General features: body, text, highlighted sections
+============================================================== */
+
+body {
+	background: url(https://img.freepik.com/free-vector/circuit-board-vector-seamless-texture-sci-fi-electronic-background_53562-4044.jpg?size=338&ext=jpg); 
+}
+
+p, h2, h3, label { 
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	
+	/* Black border around text */
+	text-shadow: 1px 1px 0 #000,
+				-1px 1px 0 #000,
+				1px -1px 0 #000,
+				-1px -1px 0 #000,
+				0px 1px 0 #000,
+				0px -1px 0 #000,
+				-1px 0px 0 #000,
+				1px 0px 0 #000,
+				2px 2px 0 #000,
+				-2px 2px 0 #000,
+				2px -2px 0 #000,
+				-2px -2px 0 #000,
+				0px 2px 0 #000,
+				0px -2px 0 #000,
+				-2px 0px 0 #000,
+				2px 0px 0 #000,
+				1px 2px 0 #000,
+				-1px 2px 0 #000,
+				1px -2px 0 #000,
+				-1px -2px 0 #000,
+				2px 1px 0 #000,
+				-2px 1px 0 #000,
+				2px -1px 0 #000,
+				-2px -1px 0 #000;
+}
+
+/* Translucent highlighted background for some sections */
+.highlight {
+	
+	/* Margins */
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 3%;
+	
+	/* Translucent background */
+	background-color: #2d69ad; /* For browsers that don't support rgba */
+	background-color: rgba(45,105,173,0.3);
+}
+
+/* ==============================================================
+   Topnav bar
+============================================================== */
+
+.topnav {
+	background-color: #2d69ad;
+	overflow: hidden;
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Style the buttons inside the navigation bar */
+.topnav a {
+	float: right;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	font-size: 17px;
+}
+
+/* Change the color of topnav links on hover */
+.topnav a:hover {
+	background-color: #ddd;
+}
+
+/* Parts of topnav shown only before login */
+.initial {
+	display: block;
+}
+
+/* Parts of topnav shown only after login */
+.afterLogin {
+	display: none;
+}
+
+/* Login and signup forms in topnav, initially hidden */
+.forms {
+	position: fixed;
+	display: none;
+	height: 120px;
+	width: 375px;
+	right: 0px;
+	top: 60px;
+	border-style: solid;
+	border-radius: 15px; 
+}
+
+/* ==============================================================
+   Game functions
+============================================================== */
+
+/* Center buttons on page */
+button {	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#score { 
+	font: normal bold 1.5em courier;
+	letter-spacing: 1px; 
+	color: white;
+	text-align: center;
+}
+
+#scoreSection {
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 15px;
+}
+
+#correctness {
+	border-radius: 15px;
+}
+
+/* ==============================================================
+   Checkboxes
+============================================================== */
+
+/* Center Select All checkbox */
+#allLabel {
+	position: absolute;
+	left: 50%;
+	margin-left: -36px;
+}
+
+/* Center Select None checkbox */
+#noneLabel {
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+}
+
+/* Each specific person's checkbox */
+.allCheckboxes {
+	position: relative;
+	width: 120%;
+}
+
+/* ==============================================================
+   Comments
+============================================================== */
+
+/* Center every comment */
+#comments {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	text-align: center;
+}
+.comment {
+	display: inline-block;
+}
+
+/* Hide "new comment" field until login */
+#newComment {
+	display: none;
+}
+
+#newCommentText {
+	width: 400px;
+}
+
+/* Put each old posted comment in its own text bubble */
+.postedComment {
+	width: 400px;
+	background-color: white;
+	border-radius: 15px;
+}
+	
+/* Undo page's general text formatting for each old posted comment*/
+.postedComment p {
+	font-weight: normal;
+	color: black;
+	text-shadow: none;
+}
+
