@@ -10,9 +10,7 @@
 
 ## Background
 
-During college, my friends and I discussed all kinds of topics, ranging from the philosophical and sociological to the nonsensical and memetic, and everywhere in between. Naturally, we said all kinds of goofy things that sounded even goofier out of context. I started collecting quotes from my friends (with permission!) to fondly revisit with them at later dates.
-
-When I brainstormed what kind of project to create for my senior year Web-Based Programming class, I got an idea. A wonderful idea. An *awful* idea. I had a wonderful, awful idea: What if I turned my quote list into a game, for my friends to guess who said what?
+During college, my friends and I discussed all kinds of topics, ranging from the philosophical and sociological to the nonsensical and memetic, and everywhere in between. I started collecting quotes from my friends (with permission!) to fondly revisit with them at later dates. When I was brainstorming what kind of project to create for my senior year Web-Based Programming class, I decided to turn my quote list into a game for my friends to guess who said what.
 
 ## Game Summary
 
